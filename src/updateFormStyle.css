@@ -1,0 +1,52 @@
+/* UpdateForm.css */
+.update-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Adjust the max-width as needed */
+    margin: auto; /* Center the form */
+    padding: 10px; /* Add padding to the form */
+    background-color: #f4f4f4; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    margin-top: 100px;
+  }
+  
+  .update-form form {
+    align-self: center; /* Center vertically */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-form label {
+    margin-bottom: 8px;
+    color: #333; /* Text color */
+  }
+  
+  .update-form input,
+  .update-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+  }
+  
+  .update-form input:focus,
+  .update-form textarea:focus {
+    border-color: #4caf50; /* Highlight border color on focus */
+  }
+  
+  .update-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-form button:hover {
+    background-color: #45a049;
+  }
+  

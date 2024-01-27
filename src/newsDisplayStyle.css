@@ -1,0 +1,18 @@
+.card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+  }
+  
+  .card-details {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    text-align: left;
+    margin: 10px;
+  }
+  
