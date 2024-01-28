@@ -40,21 +40,28 @@ const NewsDisplay = () => {
     const currentTime = new Date();
     const newsTime = new Date(dateTimeString);
     const differenceInSeconds = Math.floor((currentTime - newsTime) / 1000);
-
+  
     if (differenceInSeconds < 60) {
       return `${differenceInSeconds} second${differenceInSeconds !== 1 ? 's' : ''} ago`;
     }
-
+  
     const differenceInMinutes = Math.floor(differenceInSeconds / 60);
-
+  
     if (differenceInMinutes < 60) {
       return `${differenceInMinutes} minute${differenceInMinutes !== 1 ? 's' : ''} ago`;
     }
-
+  
     const differenceInHours = Math.floor(differenceInMinutes / 60);
-
-    return `${differenceInHours} hr${differenceInHours !== 1 ? 's' : ''} ago`;
+  
+    if (differenceInHours < 24) {
+      return `${differenceInHours} hr${differenceInHours !== 1 ? 's' : ''} ago`;
+    }
+  
+    const differenceInDays = Math.floor(differenceInHours / 24);
+  
+    return `${differenceInDays} day${differenceInDays !== 1 ? 's' : ''} ago`;
   };
+  
 
   const handleCardClick = (item) => {
     // Remove underscores from title, details, and time before navigating

@@ -12,6 +12,8 @@ const News = () => {
   const [inputValue5, setInputValue5] = useState('');
   let [storedValues, setStoredValues] = useState([]);
 
+  const [selectedCategory, setSelectedCategory] = useState('');
+
   const db = getFirestore();
 
   const saveDataToFirestore = async () => {
@@ -20,7 +22,7 @@ const News = () => {
         title: inputValue1,
         imageUrl: inputValue2,
         details: inputValue3,
-        category: inputValue4,
+        category: selectedCategory,
         time: inputValue5,
       });
       alert('Data successfully saved to Database');
@@ -91,12 +93,15 @@ const News = () => {
         value={inputValue3}
         onChange={(e) => setInputValue3(e.target.value)}
       />
-      <input
-        type="text"
-        placeholder='Enter category'
-        value={inputValue4}
-        onChange={(e) => setInputValue4(e.target.value)}
-      />
+      <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          <option value="">Select Category</option>
+          <option value="payment">payment</option>
+          <option value="college news">college news</option>
+          <option value="scholarship">scholarship</option>
+        </select>
       <input
         type="datetime-local"
         placeholder='Enter time'
